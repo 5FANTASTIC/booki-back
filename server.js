@@ -232,17 +232,19 @@ class bookdata{
 // lab-013 post for adding books to the database 
 
 
-server.get('/mybooks',getBooks);
-function getBooks(req,res){
+server.get('/mybooks',getFavirouteList);
+function getFavirouteList(req,resp){
    const email=req.query.email;
    myUserModel.find({email:email},(error,result)=>{
        if (error){
            console.log('There is an error')
        }else{
+
+        console.log(result)
            
            
 
-        res.send(result[0].books)
+        resp.send(result[0].books)
 
            
 
