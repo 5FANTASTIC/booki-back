@@ -254,7 +254,7 @@ function getFavirouteList(req,resp){
 }
 server.post('/addBook',addBook);
 function addBook(req,res){
-   const {email,title, authors, publisher,publishedDate,description,imageLinks,previewLink,buyLink}=req.body;
+   const {email,title, authors, publisher,publishedDate,description,imageLinks,previewLink,buyLink,category}=req.body;
    myUserModel.find({email:email},(error,result)=>{
        if (error){
            console.log('There is an error')
@@ -270,6 +270,7 @@ function addBook(req,res){
             imageLinks: imageLinks,
             previewLink: previewLink,
             buyLink: buyLink,
+            category:category,
             note:'add your comment here',
             }
         )
