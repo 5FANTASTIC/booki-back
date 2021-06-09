@@ -10,7 +10,8 @@ server.use(express.json())
 const PORT=3020
 
 
-mongoose.connect('mongodb://localhost:27017/301Project', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost:27017/301Project', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://5fantastic:A12345678@301project.guehi.mongodb.net/301Project?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const BookSchema  = new mongoose.Schema({
     title:String,
