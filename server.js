@@ -7,7 +7,8 @@ const axios=require('axios')
 const server=express();
 server.use(cors());
 server.use(express.json())
-const PORT=3020
+const PORT=process.env.PORT
+// const PORT=3020;
 
 
 // mongoose.connect('mongodb://localhost:27017/301Project', {useNewUrlParser: true, useUnifiedTopology: true});
