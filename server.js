@@ -131,10 +131,10 @@ function seedUserColection(){
 
 // create resource http:localhost:3000/books?collectionsName=x
  
-server.get('/collectionsBooks',getBooks);
+server.get('/collectionsBooks',getFavBooks);
 
 
-function getBooks(request,response){
+function getFavBooks(request,response){
     // let emailrequest=request.query.email;
     let collectionsNames=request.query.collectionsName
     // let collectionsName=['math','engineering'];
