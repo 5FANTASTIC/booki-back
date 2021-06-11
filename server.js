@@ -10,7 +10,8 @@ server.use(express.json())
 const PORT= process.env.PORT || 3020;
 
 
-mongoose.connect('mongodb://localhost:27017/301Project', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost:27017/301Project', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://noorhajbi:0000@cluster0.cnokp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const BookSchema  = new mongoose.Schema({
     title:String,
@@ -184,9 +185,9 @@ function getAutherBooks(request,responce){
     })
     
 }
-server.get('/advanceResearch',findBooks)
+server.get('/advanceResearch',advanceResearch)
 
-function findBooks(request,responce){
+function advanceResearch(request,responce){
     // https://www.googleapis.com/books/v1/volumes?q=computer+inauthor:Daoliang%20Li&key=AIzaSyAqaI0FtyJqYBcWPNyNeOXhHNvQx7fTRA4
     
     let searchAndKey= request.query.searchAndKey
