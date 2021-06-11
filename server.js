@@ -185,9 +185,9 @@ function getAutherBooks(request,responce){
     })
     
 }
-server.get('/advanceResearch',advanceResearch)
+server.get('/advanceResearch',advanceBooks)
 
-function advanceResearch(request,responce){
+function advanceBooks(request,responce){
     // https://www.googleapis.com/books/v1/volumes?q=computer+inauthor:Daoliang%20Li&key=AIzaSyAqaI0FtyJqYBcWPNyNeOXhHNvQx7fTRA4
     
     let searchAndKey= request.query.searchAndKey
